@@ -252,6 +252,35 @@ python3 demo.py /dev/video5
 
 ---
 
+## Optional: Interactive Development with Jupyter
+
+For a more interactive development experience, you can install and run JupyterLab on the RSB-3810. This allows you to edit and run Python code from a web browser on another computer on the same network.
+
+### 1. Install JupyterLab
+
+From the terminal on your RSB-3810, run the following command:
+
+```bash
+pip3 install jupyterlab
+```
+
+### 2. Run JupyterLab
+
+To start the Jupyter server, run:
+
+```bash
+jupyter lab --ip=0.0.0.0
+```
+
+This will start the server and make it accessible from other devices on your local network. It will output a URL containing a security token. Copy the full URL and paste it into a web browser on your development machine to access the Jupyter interface.
+
+Example URL:
+`http://<rsb-3810-ip-address>:8888/lab?token=xxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+You can now create new notebooks (`.ipynb` files) and run the demo code interactively, cell by cell, which is great for debugging and experimentation.
+
+---
+
 ## Resources
 
 - [RSB‑3810 ESS Wiki](https://ess-wiki.advantech.com.tw/view/AIM-Linux/RSB-3810)
