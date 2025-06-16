@@ -61,6 +61,7 @@ cd ~/rsb3810_ubuntu
 1. Connect the USB-A ↔ USB-A cable to the board and your Ubuntu machine
     <img src="./images/usb-a-plugged-to-flash-port.png" width="600"/>
 2. Power on the board (12V DC)
+    
     <img src="./images/plug-in-power.png" width="600"/>
 3. In terminal, run:
 
