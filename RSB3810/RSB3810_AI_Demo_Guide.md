@@ -4,13 +4,47 @@
 
 ---
 
-## Overview
+## Intro
 
-The Advantech RSB‑3810 is a compact yet powerful edge AI platform built around the MediaTek Genio 1200 SoC, offering an efficient mix of high-performance CPU cores, an integrated GPU, and a 4.8 TOPS NPU. It’s designed to bridge the gap between development flexibility and production readiness for smart embedded systems.
+The Advantech RSB‑3810 is a compact yet powerful edge AI platform built around the MediaTek Genio 1200 SoC, offering an efficient mix of high-performance CPU cores, an integrated GPU, and a 4.8 TOPS NPU. It's designed to bridge the gap between development flexibility and production readiness for smart embedded systems.
 
 In industries increasingly driven by real-time AI—whether in automation, robotics, retail, or smart cities—developers face a common bottleneck: how to prototype quickly on production-grade hardware without the friction of complex BSPs or opaque toolchains. The RSB‑3810 solves this with robust upstream support, a full Ubuntu 22.04 Linux environment, and tooling like genio-tools that make flashing and debugging simple.
 
 Whether you're building vision-based applications, deploying lightweight ML inference, or integrating high-speed industrial I/O, the RSB‑3810 delivers a rare balance of performance, connectivity, and openness—making it a compelling choice for modern AIoT workflows.
+
+## Board Specs
+
+- **MediaTek Genio 1200 (MT8395) SoC**
+  - 4x Arm Cortex-A78 + 4x Cortex-A55
+  - Mali-G57 GPU
+  - Integrated 4.8 TOPS AI accelerator (APU 3.0)
+- **Memory & Storage**
+  - Up to 8GB LPDDR4X
+  - 64GB eMMC onboard
+  - microSD slot available
+- **Video I/O**
+  - HDMI 2.0 (4K@60Hz output)
+  - MIPI-CSI for camera input
+  - MIPI-DSI for LCD panel output
+- **Connectivity**
+  - Gigabit Ethernet
+  - Optional Wi-Fi/BT module via M.2 Key E
+  - 4G/5G support via M.2 Key B
+- **Expansion Interfaces**
+  - 1x USB 3.0, 1x USB 2.0, 1x USB OTG
+  - UART, I2C, SPI, CAN, GPIO
+  - M.2 Key M for storage expansion
+  - PCIe Gen3 (1-lane)
+- **Power & Form Factor**
+  - Wide voltage input: 12V DC
+  - Industrial-grade SBC form factor (Pico-ITX 100mm x 72mm)
+- **Software Support**
+  - Ubuntu 22.04 LTS
+  - Android 11
+  - Genio SDK / Genio Tools
+  - U-Boot and Linux Kernel upstream support
+
+## Overview
 
 In this guide we'll walk through flashing Ubuntu 22.04 to the Advantech [RSB‑3810](https://ess-wiki.advantech.com.tw/view/RSB-3810), installing the MediaTek genio‑tools SDK, and running a real‑time TensorFlow Lite object‑detection demo. By the end you'll have a fan‑less edge computer recognising objects from a USB webcam—ready for industrial IoT or smart‑vision prototypes.
 
