@@ -1,5 +1,6 @@
 # RSB‑3810 Ubuntu Quick‑Start & Edge‑AI Demo
 
+<img src="./images/main.png" width="700"/>
 
 ---
 
@@ -29,6 +30,7 @@ sudo apt update
 pipx install genio-tools
 # or: pip3 install genio-tools --break-system-packages
 ```
+<img src="./images/sudo-apt-update-ubuntu-for-genio.png" width="600"/>
 
 Add udev rules:
 
@@ -40,6 +42,7 @@ SUBSYSTEM=="gpio", MODE="0660", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/72-
 sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo usermod -a -G plugdev $USER
 ```
+<img src="./images/set-udev-rules.png" width="600"/>
 
 Log out and back in.
 
@@ -51,21 +54,28 @@ Download the latest image from the [RSB‑3810 Wiki](https://advantecho365-my.sh
 tar -xvzf Ubuntu_Recovery_Image.tgz -C ~/ 
 cd ~/rsb3810_ubuntu
 ```
+<img src="./images/unzip-recovery-image.png" width="600"/>
 
 ### 3. Flash Procedure
 
 1. Connect the USB-A ↔ USB-A cable to the board and your Ubuntu machine
+    <img src="./images/usb-a-plugged-to-flash-port.png" width="600"/>
 2. Power on the board (12V DC)
+    <img src="./images/plug-in-power.png" width="600"/>
 3. In terminal, run:
 
 ```bash
 genio-flash
 ```
+<img src="./images/run-genio-flash.png" width="600"/>
 
-4. On the board, **hold the Download button**, **press Reset**, then **release Download**
+4. On the board, **hold the Download button**, **press Reset**, then **release Download** when < wait for any device > appears onscreen. 
+    <img src="./images/download-buton-position.png" width="600"/>
+    <img src="./images/reset-button-position.png" width="600"/>
 5. When you see `Waiting for any device`, wait ~8–10s for the flashing to begin
 
 Full flash takes several minutes. Wait for completion confirmation.
+<img src="./images/genio-flash-complete.png" width="600"/>
 
 ---
 
@@ -76,6 +86,7 @@ Full flash takes several minutes. Wait for completion confirmation.
 Use the included DB9 cable with the USB-to-RS232 adapter. The correct DB9 connector is the one with **3 physical pins visible**.
 
 1. Connect DB9 to the RS232 port on the board (labeled COM1)
+    <img src="./images/plug-serial-to-board.png" width="600"/>
 2. Plug adapter into your host machine
 3. Use `screen` or `minicom` at `921600` baud:
 
@@ -98,6 +109,7 @@ For USB flashing in a VM: make sure the Mediatek device is passed through to the
 ### 1. Network Access
 
 If your RSB‑3810 doesn't include Wi‑Fi, plug in Ethernet. Internet is required to install dependencies.
+<img src="./images/ethernet-plugged-in.png" width="600"/>
 
 ### 2. Log In
 
@@ -151,6 +163,7 @@ unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
 mv detect.tflite model.tflite
 mv labelmap.txt labels.txt
 ```
+<img src="./images/download-unzip-model.png" width="600"/>
 
 `labelmap.txt` already starts with "???" (the background class), so no edits are required.
 
@@ -233,6 +246,8 @@ python3 demo.py
 # or, specify camera device:
 python3 demo.py /dev/video5
 ```
+<img src="./images/gui-object-detection.png" width="600"/>
+<img src="./images/gui-object-detection2.png" width="600"/>
 
 ---
 
