@@ -4,7 +4,7 @@
 
 ---
 
-## Intro
+## Introduction
 
 The Advantech RSB‑3810 is a compact yet powerful edge AI platform built around the MediaTek Genio 1200 SoC, offering an efficient mix of high-performance CPU cores, an integrated GPU, and a 4.8 TOPS NPU. It's designed to bridge the gap between development flexibility and production readiness for smart embedded systems.
 
@@ -290,6 +290,10 @@ python3 demo.py /dev/video5
 <img src="./images/gui-object-detection.png" width="600"/>
 <img src="./images/gui-object-detection2.png" width="600"/>
 
+
+## Final Thoughts
+
+The RSB‑3810 offers an accessible and efficient path into edge AI development. From its robust Genio 1200 SoC with integrated NPU, to its rich I/O and flexible expansion options, the board delivers both power and versatility in a small footprint. Whether you’re experimenting with computer vision, deploying smart sensors, or building a kiosk or robotics solution, this board enables you to develop and test with minimal friction. With proper Linux support, open tooling, and solid documentation, the RSB‑3810 is ready for both prototyping and real-world deployment.
 ---
 
 ## Optional: Interactive Development with Jupyter
