@@ -6,6 +6,12 @@
 
 ## Overview
 
+The Advantech RSB‑3810 is a compact yet powerful edge AI platform built around the MediaTek Genio 1200 SoC, offering an efficient mix of high-performance CPU cores, an integrated GPU, and a 4.8 TOPS NPU. It’s designed to bridge the gap between development flexibility and production readiness for smart embedded systems.
+
+In industries increasingly driven by real-time AI—whether in automation, robotics, retail, or smart cities—developers face a common bottleneck: how to prototype quickly on production-grade hardware without the friction of complex BSPs or opaque toolchains. The RSB‑3810 solves this with robust upstream support, a full Ubuntu 22.04 Linux environment, and tooling like genio-tools that make flashing and debugging simple.
+
+Whether you're building vision-based applications, deploying lightweight ML inference, or integrating high-speed industrial I/O, the RSB‑3810 delivers a rare balance of performance, connectivity, and openness—making it a compelling choice for modern AIoT workflows.
+
 In this guide we'll walk through flashing Ubuntu 22.04 to the Advantech [RSB‑3810](https://ess-wiki.advantech.com.tw/view/RSB-3810), installing the MediaTek genio‑tools SDK, and running a real‑time TensorFlow Lite object‑detection demo. By the end you'll have a fan‑less edge computer recognising objects from a USB webcam—ready for industrial IoT or smart‑vision prototypes.
 
 ## Prerequisites
